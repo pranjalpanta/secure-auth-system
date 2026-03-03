@@ -43,7 +43,7 @@ class VaultApp(tk.Tk):
             page_name = F.__name__
             frame = F(parent=self.container, controller=self)
             self.frames[page_name] = frame
-            frame.grid(row=0, column=0, sticky="nsew")
+            frame.grid(row=0, column=0, sticky="nsew") #Implement dynamic frame registration and initialization for multi-page GUI navigation
 
         self.show_frame("AuthPage")
 
