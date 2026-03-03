@@ -1,8 +1,7 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
 import os
-import sys 
-
+import sys #Fix invalid sys import syntax
 
 if __name__ == "__main__":
     # This is the application entry point
