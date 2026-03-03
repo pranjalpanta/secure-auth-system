@@ -32,7 +32,8 @@ class VaultApp(tk.Tk):
         self.notification_label = None 
 
         self.container = ttk.Frame(self)
-        self.container.pack(fill="both", expand=True)
+        self.container.pack(fill="both", expand=True) # Implement VaultApp main window initialization with Tkinter root configuration, application state variables, CertificateAuthority integration, and primary container frame setup
+
 
         self.frames = {}
         # List ALL page classes
