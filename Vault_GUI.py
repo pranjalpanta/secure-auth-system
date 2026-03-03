@@ -73,7 +73,7 @@ class VaultApp(tk.Tk):
         if hasattr(self, '_notification_after_id'):
             self.after_cancel(self._notification_after_id)
             
-        self._notification_after_id = self.after(duration, lambda: self.notification_label.config(text=""))
+        self._notification_after_id = self.after(duration, lambda: self.notification_label.config(text="")) #Improve notification handling by cancelling previous timers and implementing auto-clear functionality to prevent overlapping GUI messages
 
 
 class AuthPage(ttk.Frame):
