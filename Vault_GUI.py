@@ -67,7 +67,7 @@ class VaultApp(tk.Tk):
     def show_notification(self, message, duration=5000):
         if not self.notification_label:
             self.notification_label = ttk.Label(self, text="", relief='sunken', foreground='white', background='blue', font=('Arial', 10, 'bold'))
-            self.notification_label.pack(side='bottom', fill='x', ipady=5)
+            self.notification_label.pack(side='bottom', fill='x', ipady=5) #Add show_notification method to create and display a styled bottom notification label for user feedback within the GUI
 
         self.notification_label.config(text=message)
         if hasattr(self, '_notification_after_id'):
