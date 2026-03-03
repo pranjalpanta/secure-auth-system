@@ -55,10 +55,10 @@ class VaultApp(tk.Tk):
             self.current_user_email = email
             frame.update_vault_data()
         elif page_name == "VaultPage":
-            frame.update_vault_data()
+            frame.update_vault_data() #
         
         if page_name == "ListPage":
-            frame._refresh_list_tab()
+            frame._refresh_list_tab() #If navigating to VaultPage with an email → store the email and update vault data  #If class name changes → navigation breaks silently.
             
         # --- FIX: Trigger reset on the AuthPage when navigating to it ---
         if page_name == "AuthPage":
