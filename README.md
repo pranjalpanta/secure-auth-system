@@ -49,3 +49,16 @@ The project follows a layered design:
 - Required dependencies (install if needed)
 
 ### Run the Application
+## python Vault_GUI.py
+
+## 🎓 Academic Context
+
+This project was developed as part of a Practical Cryptography coursework module.  
+It demonstrates applied cryptographic implementation, secure authentication design, and structured security architecture in a controlled academic environment.
+
+---
+
+## ⚖️ Security Notice
+
+This project is intended for educational purposes.  
+It demonstrates applied cryptography concepts and secure design patterns but should undergo further security hardening before any production deployment.
