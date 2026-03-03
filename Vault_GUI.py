@@ -14,7 +14,7 @@ try:
     from src.pki.ca import CertificateAuthority
     from src.core.vault import Vault
 except ImportError as e:
-    messagebox.showerror("Setup Error", f"Missing security module files. Please ensure you created the 'src' folders and files correctly.\nError: {e}")
+    messagebox.showerror("Setup Error", f"Missing security module files. Please ensure you created the 'src' folders and files correctly.\nError: {e}") # Add safe backend module imports with ImportError handling and startup validation
     sys.exit(1) 
 
 
