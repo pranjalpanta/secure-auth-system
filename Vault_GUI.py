@@ -1,4 +1,13 @@
+import tkinter as tk
+from tkinter import ttk, messagebox
+import os
+import sys 
 
+
+if __name__ == "__main__":
+    # This is the application entry point
+    app = VaultApp()
+    app.mainloop()
 
 # Import the core backend logic
 try:
