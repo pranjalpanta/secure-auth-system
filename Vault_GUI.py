@@ -49,7 +49,7 @@ class VaultApp(tk.Tk):
 
     def show_frame(self, page_name, email=None):
         frame = self.frames[page_name]
-        frame.tkraise()
+        frame.tkraise() #Add show_frame method to handle dynamic page switching by retrieving stored frames and raising the selected frame for GUI navigation control
         
         if page_name == "VaultPage" and email:
             self.current_user_email = email
