@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
 import os
-import sys #Fix invalid sys import syntax
+import sys #Add required Tkinter, messagebox, OS, and system imports for GUI and runtime functionality
 
 if __name__ == "__main__":
     # This is the application entry point
