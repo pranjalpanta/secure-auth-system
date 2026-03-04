@@ -62,6 +62,117 @@ The system demonstrates **secure software design principles including authentica
 ---
 
 # 🧠 System Architecture
+User
+│
+▼
+Tkinter GUI
+│
+▼
+Authentication Layer
+(Master Password Verification)
+│
+▼
+Crypto Engine
+(Encryption / Decryption)
+│
+▼
+Encrypted Vault Storage
+
+
+The application follows a **layered security architecture** to separate user interface, authentication, cryptography, and storage.
+
+---
+
+# 🏗️ Architecture (Layer Description)
+
+1️⃣ **GUI Layer**  
+Tkinter interface used for interacting with the application.
+
+2️⃣ **Authentication Layer**  
+Verifies the master password before vault access.
+
+3️⃣ **Crypto Layer**  
+Handles encryption and decryption operations.
+
+4️⃣ **Vault Layer**  
+Stores encrypted credential entries securely.
+
+---
+
+# 🚀 Setup & Run
+
+## Requirements
+
+- Python **3.10+**
+
+---
+
+## Install Dependencies
+
+```bash
+pip install -r requirements.txt
+
+python Vault_GUI.py
+
+
+
+Secure Password Manager
+-----------------------
+
+Email: ________
+Password: ________
+
+[ Add Entry ]
+[ View Entries ]
+[ Delete Entry ]
+
+
+
+
+📁 Project Structure
+secure-password-manager/
+│
+├── Vault_GUI.py          # Main GUI application
+├── crypto.py             # Encryption / Decryption logic
+├── hsm.py               # Master password verification
+├── keystore.py              # Vault storage management
+├── requirements.txt
+└── README.md
+
+
+🔐 Security Model
+
+This password manager follows a layered security model:
+
+• Master password authentication
+• Encryption before vault storage
+• No plaintext password storage
+• Encrypted credential vault
+• Input validation and error handling
+
+
+🛠 Future Improvements
+
+Cloud vault synchronization
+
+Multi-device password sync
+
+Dark mode UI
+
+Secure backup export
+
+Advanced password generator
+
+
+
+📄 License
+
+This project is licensed under the MIT License.
+
+
+👨‍💻 Author
+
+Pranjal Panta
 
 
 
