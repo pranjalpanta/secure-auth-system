@@ -85,7 +85,7 @@ class AuthPage(ttk.Frame):
         main_label.pack(pady=20) #Add authentication page title label with styling and layout spacing for improved user interface clarity
 
         self.switch_frame = ttk.Frame(self)
-        self.switch_frame.pack(padx=10, pady=5)
+        self.switch_frame.pack(padx=10, pady=5) #Add container frame for authentication widgets with padding to organize login/register UI layout
 
         self.email_var = tk.StringVar()
         self.password_var = tk.StringVar()
