@@ -93,7 +93,7 @@ class AuthPage(ttk.Frame):
         
         self.is_register_mode = False
         self._create_widgets()
-        self._toggle_mode()
+        self._toggle_mode() #Initialize default authentication mode and trigger widget creation with initial UI state toggle configuration
 
     def _create_widgets(self):
         ttk.Label(self.switch_frame, text="Email:").grid(row=0, column=0, padx=5, pady=5, sticky='w')
