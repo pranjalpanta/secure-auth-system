@@ -71,7 +71,7 @@ class VaultApp(tk.Tk):
 
         self.notification_label.config(text=message)
         if hasattr(self, '_notification_after_id'):
-            self.after_cancel(self._notification_after_id)
+            self.after_cancel(self._notification_after_id) #Update notification label text and cancel existing scheduled timer to prevent overlapping GUI notification events
             
         self._notification_after_id = self.after(duration, lambda: self.notification_label.config(text="")) #Improve notification handling by cancelling previous timers and implementing auto-clear functionality to prevent overlapping GUI messages
 
