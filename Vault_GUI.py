@@ -137,7 +137,7 @@ class AuthPage(ttk.Frame):
 
     def _handle_action(self):
         email = self.email_var.get().strip()
-        password = self.password_var.get()
+        password = self.password_var.get() #Add authentication handler to capture and sanitize user email and password input from the login form
         
         if not email or not password:
             messagebox.showerror("Error", "Email and Password cannot be empty.")
