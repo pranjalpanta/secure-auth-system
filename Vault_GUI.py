@@ -121,7 +121,7 @@ class AuthPage(ttk.Frame):
             self.confirm_label.grid(row=2, column=0, padx=5, pady=5, sticky='w')
             self.confirm_entry.grid(row=2, column=1, padx=5, pady=5)
             self.action_button.config(text="Register")
-            self.mode_switch_button.config(text="Switch to Login") 
+            self.mode_switch_button.config(text="Switch to Login") #Update registration mode UI to display confirm password fields and adjust button labels for registration workflow 
         else:
             self.confirm_label.grid_forget()
             self.confirm_entry.grid_forget()
