@@ -37,7 +37,7 @@ class VaultApp(tk.Tk):
 
         self.frames = {}
         # List ALL page classes
-        page_classes = (AuthPage, VaultPage, SavePage, ListPage)
+        page_classes = (AuthPage, VaultPage, SavePage, ListPage) #Initialize frame registry and define application page classes for dynamic multi-page navigation management
         
         for F in page_classes:
             page_name = F.__name__
