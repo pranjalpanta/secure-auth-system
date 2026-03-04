@@ -79,7 +79,7 @@ class VaultApp(tk.Tk):
 class AuthPage(ttk.Frame):
     def __init__(self, parent, controller):
         super().__init__(parent)
-        self.controller = controller
+        self.controller = controller #Implement AuthPage frame class with parent initialization and controller binding for structured GUI navigation control
 
         main_label = ttk.Label(self, text="PKI Vault: Login / Register", font=('Arial', 16, 'bold'))
         main_label.pack(pady=20)
