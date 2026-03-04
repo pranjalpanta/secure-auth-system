@@ -89,7 +89,7 @@ class AuthPage(ttk.Frame):
 
         self.email_var = tk.StringVar()
         self.password_var = tk.StringVar()
-        self.confirm_password_var = tk.StringVar()
+        self.confirm_password_var = tk.StringVar() #Initialize Tkinter StringVar variables for email, password, and confirm password input state management in authentication form
         
         self.is_register_mode = False
         self._create_widgets()
