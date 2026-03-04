@@ -14,7 +14,7 @@ try:
     from src.pki.ca import CertificateAuthority
     from src.core.vault import Vault
 except ImportError as e:
-    messagebox.showerror("Setup Error", f"Missing security module files. Please ensure you created the 'src' folders and files correctly.\nError: {e}") # Add safe backend module imports with ImportError handling and startup validation
+    messagebox.showerror("Setup Error", f"Missing security module files. Please ensure you created the 'src' folders and files correctly.\nError: {e}") #Add safe backend module imports with ImportError handling and startup validation
     sys.exit(1) 
 
 
@@ -29,7 +29,7 @@ class VaultApp(tk.Tk):
         self.current_vault = None
         self.ca_service = CertificateAuthority()
         self.current_user_email = "" 
-        self.notification_label = None 
+        self.notification_label = None #Initialize core security state variables including HSM reference, vault context, certificate authority service, user session tracking, and notification handler
 
         self.container = ttk.Frame(self)
         self.container.pack(fill="both", expand=True) # Implement VaultApp main window initialization with Tkinter root configuration, application state variables, CertificateAuthority integration, and primary container frame setup
