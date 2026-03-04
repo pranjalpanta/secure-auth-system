@@ -82,7 +82,7 @@ class AuthPage(ttk.Frame):
         self.controller = controller #Implement AuthPage frame class with parent initialization and controller binding for structured GUI navigation control
 
         main_label = ttk.Label(self, text="PKI Vault: Login / Register", font=('Arial', 16, 'bold'))
-        main_label.pack(pady=20)
+        main_label.pack(pady=20) #Add authentication page title label with styling and layout spacing for improved user interface clarity
 
         self.switch_frame = ttk.Frame(self)
         self.switch_frame.pack(padx=10, pady=5)
