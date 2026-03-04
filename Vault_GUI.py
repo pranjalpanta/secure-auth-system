@@ -23,7 +23,7 @@ class VaultApp(tk.Tk):
         super().__init__()
         self.title("Zyper PKI Vault GUI")
         self.geometry("600x500") 
-        self.resizable(False, False)
+        self.resizable(False, False) #Initialize main VaultApp window with title, fixed geometry configuration, and disabled resizing for consistent GUI layout control
 
         self.current_hsm = None
         self.current_vault = None
