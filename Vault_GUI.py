@@ -109,19 +109,19 @@ class AuthPage(ttk.Frame):
         self.action_button.grid(row=3, column=0, columnspan=2, pady=10) #Add authentication action button with event handler binding and layout configuration for login and registration operations
 
         self.mode_switch_button = ttk.Button(self.switch_frame, text="Switch to Register", command=self._toggle_mode)
-        self.mode_switch_button.grid(row=4, column=0, columnspan=2, pady=5)
+        self.mode_switch_button.grid(row=4, column=0, columnspan=2, pady=5) #Add mode switch button to toggle between login and registration views within the authentication interface
 
     def _toggle_mode(self):
         self.is_register_mode = not self.is_register_mode
         self.password_var.set("")
         self.confirm_password_var.set("")
-        self.email_var.set("") # Clear email when switching modes
+        self.email_var.set("") 
 
         if self.is_register_mode:
             self.confirm_label.grid(row=2, column=0, padx=5, pady=5, sticky='w')
             self.confirm_entry.grid(row=2, column=1, padx=5, pady=5)
             self.action_button.config(text="Register")
-            self.mode_switch_button.config(text="Switch to Login")
+            self.mode_switch_button.config(text="Switch to Login") 
         else:
             self.confirm_label.grid_forget()
             self.confirm_entry.grid_forget()
