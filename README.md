@@ -1,64 +1,71 @@
+# 🔐 Secure Password Manager
 
-# Secure Password Manager
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Security](https://img.shields.io/badge/Security-Encrypted%20Vault-critical)
+![Status](https://img.shields.io/badge/Build-Passing-brightgreen)
 
-A Python-based security application implementing strong user authentication, PKI integration, and encrypted vault storage using applied cryptographic principles.
-
----
-
-## 🔐 Project Overview
-
-This system is designed to demonstrate secure software development practices by integrating:
-
-- Public Key Infrastructure (PKI)
-- Certificate Authority (CA) services
-- Secure vault storage
-- Controlled user authentication
-- Cryptographic encryption and decryption
-
-The application follows a modular architecture separating GUI components from backend security logic to maintain clean design and security boundaries.
+A Python-based **Password Manager** that securely stores credentials using **encryption** and **master-password protection**.  
+All sensitive vault data is encrypted before storage and only accessible after successful authentication.
 
 ---
 
-## ✨ Key Features
+## ✅ Project Highlights
 
-- Secure encryption and decryption of stored data  
-- Certificate-based authentication model  
-- Modular HSM, CA, and Vault components  
-- Tkinter-based graphical user interface  
-- Structured backend inside `src/` directory  
-- Controlled vault access per authenticated user  
-
----
-
-## 🏗️ System Architecture
-
-The project follows a layered design:
-
-1. GUI Layer – Tkinter-based frontend  
-2. Authentication Layer – PKI & certificate validation  
-3. Cryptographic Engine – Secure encryption/decryption  
-4. Vault Storage Layer – Protected credential storage  
-5. Security Modules – HSM, CA, and vault management  
+- Master password protected vault
+- Strong encryption for stored credentials
+- Add / View / Update / Delete credential entries
+- Password generator (optional)
+- Clean separation of GUI and security logic
+- Local encrypted storage (vault file)
 
 ---
 
-## ⚙️ Installation & Execution
+## 🧩 Features
+
+### 🔑 Authentication
+- Master password required to unlock vault
+- Input validation for empty fields (email/password)
+
+### 🔒 Vault Security
+- No plaintext password storage
+- Encrypted vault saved locally
+- Decryption only after successful authentication
+
+### 🖥️ User Interface
+- Simple GUI (Tkinter)
+- Easy workflow for managing credentials
+
+---
+
+## 🏗️ Architecture (Simple)
+
+1. **GUI Layer** (Tkinter)  
+2. **Auth Layer** (Master password verification)  
+3. **Crypto Layer** (Encrypt / Decrypt operations)  
+4. **Vault Layer** (Store encrypted credential data)
+
+---
+## ⚙️ Setup & Run
 
 ### Requirements
 - Python 3.10+
-- Required dependencies (install if needed)
 
-### Run the Application
-## python Vault_GUI.py
+### Install Dependencies
+```bash
+pip install -r requirements.txt
 
-## 🎓 Academic Context
+python Vault_GUI.py
 
-This project was developed as part of a Practical Cryptography coursework module.  
-It demonstrates applied cryptographic implementation, secure authentication design, and structured security architecture in a controlled academic environment.
 
----
 
-## ⚖️ Security Notice
+## 📌 Requirements Fulfillment
 
-This project is intended for educational purposes.  
-It demonstrates applied cryptography concepts and secure design patterns but should undergo further security hardening before any production deployment.
+| Requirement | Implementation |
+|------------|----------------|
+| Secure storage | Encrypted local vault |
+| Authentication | Master password protection |
+| Confidentiality | Encryption before saving |
+| Usability | Tkinter GUI |
+| Validation | Empty input checks |
+
