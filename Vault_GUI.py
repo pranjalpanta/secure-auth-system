@@ -115,7 +115,7 @@ class AuthPage(ttk.Frame):
         self.is_register_mode = not self.is_register_mode
         self.password_var.set("")
         self.confirm_password_var.set("")
-        self.email_var.set("") 
+        self.email_var.set("")  #Implement authentication mode toggle logic and reset input fields to ensure clean state transition between login and registration views
 
         if self.is_register_mode:
             self.confirm_label.grid(row=2, column=0, padx=5, pady=5, sticky='w')
