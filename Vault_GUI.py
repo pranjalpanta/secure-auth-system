@@ -100,7 +100,7 @@ class AuthPage(ttk.Frame):
         ttk.Entry(self.switch_frame, textvariable=self.email_var, width=30).grid(row=0, column=1, padx=5, pady=5) #Implement email input label and entry field in authentication form layout within widget creation method
 
         ttk.Label(self.switch_frame, text="Password:").grid(row=1, column=0, padx=5, pady=5, sticky='w')
-        ttk.Entry(self.switch_frame, textvariable=self.password_var, show='*', width=30).grid(row=1, column=1, padx=5, pady=5)
+        ttk.Entry(self.switch_frame, textvariable=self.password_var, show='*', width=30).grid(row=1, column=1, padx=5, pady=5) #Add password label and masked entry field to authentication form for secure credential input handling
 
         self.confirm_label = ttk.Label(self.switch_frame, text="Confirm Pass:")
         self.confirm_entry = ttk.Entry(self.switch_frame, textvariable=self.confirm_password_var, show='*', width=30)
