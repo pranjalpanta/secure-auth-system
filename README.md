@@ -15,6 +15,8 @@ A Python-based encrypted credential vault with master password protection.
 ![Security](https://img.shields.io/badge/Security-Password%20Vault-red)
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![Build](https://img.shields.io/badge/Build-Stable-brightgreen)
+<img width="141" height="39" alt="image" src="https://github.com/user-attachments/assets/bc4c617e-f6e3-4169-8e1d-4c868488c0ca" />
+
 
 </p>
 
