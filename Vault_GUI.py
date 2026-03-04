@@ -103,7 +103,7 @@ class AuthPage(ttk.Frame):
         ttk.Entry(self.switch_frame, textvariable=self.password_var, show='*', width=30).grid(row=1, column=1, padx=5, pady=5) #Add password label and masked entry field to authentication form for secure credential input handling
 
         self.confirm_label = ttk.Label(self.switch_frame, text="Confirm Pass:")
-        self.confirm_entry = ttk.Entry(self.switch_frame, textvariable=self.confirm_password_var, show='*', width=30)
+        self.confirm_entry = ttk.Entry(self.switch_frame, textvariable=self.confirm_password_var, show='*', width=30) #Add confirm password label and masked entry field to support registration validation in authentication interface
         
         self.action_button = ttk.Button(self.switch_frame, text="Login", command=self._handle_action)
         self.action_button.grid(row=3, column=0, columnspan=2, pady=10)
