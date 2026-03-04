@@ -132,7 +132,7 @@ class AuthPage(ttk.Frame):
         """Clears the Email, Password, and Confirm Password fields."""
         self.email_var.set("")
         self.password_var.set("")
-        self.confirm_password_var.set("")
+        self.confirm_password_var.set("") #Implement clear_fields method to reset email, password, and confirm password input variables in the authentication form
 
 
     def _handle_action(self):
