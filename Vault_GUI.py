@@ -126,7 +126,7 @@ class AuthPage(ttk.Frame):
             self.confirm_label.grid_forget()
             self.confirm_entry.grid_forget()
             self.action_button.config(text="Login")
-            self.mode_switch_button.config(text="Switch to Register")
+            self.mode_switch_button.config(text="Switch to Register") #Restore login mode UI by hiding confirm password fields and updating button labels for authentication workflow
 
     def clear_fields(self):
         """Clears the Email, Password, and Confirm Password fields."""
