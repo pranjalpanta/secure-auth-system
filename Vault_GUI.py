@@ -55,7 +55,7 @@ class VaultApp(tk.Tk):
             self.current_user_email = email
             frame.update_vault_data()
         elif page_name == "VaultPage":
-            frame.update_vault_data() #
+            frame.update_vault_data() #Enhance VaultPage navigation logic to assign user context and trigger vault data refresh during frame transitions
         
         if page_name == "ListPage":
             frame._refresh_list_tab() #If navigating to VaultPage with an email → store the email and update vault data  #If class name changes → navigation breaks silently.
