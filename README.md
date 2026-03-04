@@ -1,13 +1,32 @@
-# 🔐 Secure Password Manager
+<p align="center">
+  <img src="https://img.icons8.com/fluency/96/password.png" width="90"/>
+</p>
+
+<h1 align="center">🔐 Secure Password Manager</h1>
+
+<p align="center">
+A Python-based encrypted credential vault with master password protection.
+</p>
+
+<p align="center">
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue)
+![Encryption](https://img.shields.io/badge/Encryption-AES%20Vault-orange)
+![Security](https://img.shields.io/badge/Security-Password%20Vault-red)
 ![License](https://img.shields.io/badge/License-MIT-green)
-![Security](https://img.shields.io/badge/Security-Encrypted%20Vault-orange)
-![Build](https://img.shields.io/badge/Build-Passing-brightgreen)
+![Build](https://img.shields.io/badge/Build-Stable-brightgreen)
 
-A Python-based **Password Manager** that securely stores credentials using **strong encryption and master-password protection**.
+</p>
 
-All sensitive vault data is **encrypted before storage** and only accessible after successful authentication.
+---
+
+# 📌 Project Overview
+
+This project is a **secure password manager built with Python** that stores credentials inside an **encrypted vault protected by a master password**.
+
+All sensitive data is encrypted **before storage** and can only be accessed after successful authentication.
+
+The system demonstrates **secure software design principles including authentication, encryption, and data protection**.
 
 ---
 
@@ -26,8 +45,8 @@ All sensitive vault data is **encrypted before storage** and only accessible aft
 
 ## 🔑 Authentication
 
-- Master password required to unlock vault
-- Input validation for empty fields (email / password)
+- Master password required to unlock the vault
+- Input validation for empty fields (email/password)
 
 ## 🔒 Vault Security
 
@@ -42,87 +61,7 @@ All sensitive vault data is **encrypted before storage** and only accessible aft
 
 ---
 
-# 🏗️ Architecture (Simple)
+# 🧠 System Architecture
 
-The system follows a **layered security architecture**.
-
-1. **GUI Layer**  
-   Tkinter interface for user interaction.
-
-2. **Authentication Layer**  
-   Verifies the master password.
-
-3. **Crypto Layer**  
-   Handles encryption and decryption operations.
-
-4. **Vault Layer**  
-   Stores encrypted credential data.
-
----
-
-# 🚀 Setup & Run
-
-## Requirements
-
-- Python **3.10+**
-
----
-
-## Install Dependencies
-
-```bash
-pip install -r requirements.txt
-
-
-python Vault_GUI.py
-
-
-#📁 Project Structure
-secure-password-manager/
-│
-├── Vault_GUI.py          # Main GUI application
-├── crypto.py             # Encryption / Decryption logic
-├── hsm.py               # Master password verification
-├── vkeystore.py              # Vault storage management
-├── requirements.txt
-└── README.md
-
-
-🔐 Security Notes
-
-Passwords are never stored in plaintext
-
-Vault data is encrypted before disk storage
-
-Access is controlled by a master password
-
-Separation of GUI and cryptographic logic
-
-
-🛠 Future Improvements
-
-Cloud vault sync
-
-Auto password generator improvements
-
-Multi-device support
-
-Dark mode UI
-
-Secure backup export
-
-
-📄 License
-
-This project is licensed under the MIT License.
-
-
-📄 License
-
-This project is licensed under the MIT License.
-
-
-👨‍💻 Author
-Pranjal Panta
 
 
