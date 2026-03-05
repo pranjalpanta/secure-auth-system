@@ -158,7 +158,7 @@ class AuthPage(ttk.Frame):
             vault = Vault(email) #initialize HSM and Vault during user registration
 
             if os.path.exists(hsm.keystore.filename):
-                messagebox.showerror("Error", "User already registered. Please Login.")
+                messagebox.showerror("Error", "User already registered. Please Login.") #prevent duplicate user registration
                 return
 
             hsm.initialize_new_token(password, self.controller.ca_service)
