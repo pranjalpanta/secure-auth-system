@@ -150,7 +150,7 @@ class AuthPage(ttk.Frame):
                 return
             self._register_user(email, password)
         else:
-            self._login_user(email, password)
+            self._login_user(email, password) # implement conditional login and registration handling
 
     def _register_user(self, email, password):
         try:
