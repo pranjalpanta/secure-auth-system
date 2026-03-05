@@ -162,7 +162,7 @@ class AuthPage(ttk.Frame):
                 return
 
             hsm.initialize_new_token(password, self.controller.ca_service)
-            vault.setup(hsm)
+            vault.setup(hsm) #initialize HSM token and configure vault
             
             messagebox.showinfo("Success", "Registration successful! Please log in now.")
             self._toggle_mode()
