@@ -9,13 +9,14 @@ A Python-based encrypted credential vault with master password protection.
 </p>
 
 <p align="center">
-
+  
+![Status](https://img.shields.io/badge/status-in%20progress-yellow) 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue)
 ![Encryption](https://img.shields.io/badge/Encryption-AES%20Vault-orange)
 ![Security](https://img.shields.io/badge/Security-Password%20Vault-red)
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![Build](https://img.shields.io/badge/Build-Stable-brightgreen)
-![Status](https://img.shields.io/badge/status-in%20progress-yellow) 
+
 
 
 </p>
