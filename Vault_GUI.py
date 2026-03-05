@@ -146,7 +146,7 @@ class AuthPage(ttk.Frame):
         if self.is_register_mode:
             confirm_password = self.confirm_password_var.get()
             if password != confirm_password:
-                messagebox.showerror("Error", "Passwords do not match.")
+                messagebox.showerror("Error", "Passwords do not match.") #add password confirmation validation during registration
                 return
             self._register_user(email, password)
         else:
