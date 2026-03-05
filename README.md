@@ -1,180 +1,126 @@
 <p align="center">
-  <img src="https://img.icons8.com/fluency/96/password.png" width="90"/>
+  <img src="https://img.icons8.com/fluency/96/password.png" width="90" alt="Password Icon"/>
 </p>
 
 <h1 align="center">🔐 Secure Password Manager</h1>
 
 <p align="center">
-A Python-based encrypted credential vault with master password protection.
+  A Python-based password vault that encrypts credentials with a master password and stores them securely on disk.
 </p>
 
 <p align="center">
-  
-![Status](https://img.shields.io/badge/status-in%20progress-yellow) 
-![Python](https://img.shields.io/badge/Python-3.10+-blue)
-![Encryption](https://img.shields.io/badge/Encryption-AES%20Vault-orange)
-![Security](https://img.shields.io/badge/Security-Password%20Vault-red)
-![License](https://img.shields.io/badge/License-MIT-green)
-![Build](https://img.shields.io/badge/Build-Stable-brightgreen)
-
-
-
+  <img src="https://img.shields.io/badge/status-in%20progress-yellow" alt="Status"/>
+  <img src="https://img.shields.io/badge/Python-3.10%2B-blue" alt="Python"/>
+  <img src="https://img.shields.io/badge/Encryption-AES%20Vault-orange" alt="Encryption"/>
+  <img src="https://img.shields.io/badge/Security-Encrypted%20Vault-red" alt="Security"/>
+  <img src="https://img.shields.io/badge/License-MIT-green" alt="License"/>
+  <img src="https://img.shields.io/badge/Build-Stable-brightgreen" alt="Build"/>
 </p>
 
 ---
 
-# 📌 Project Overview
+## 📌 Overview
 
-This project is a **secure password manager built with Python** that stores credentials inside an **encrypted vault protected by a master password**.
+**Secure Password Manager** is a Python application that stores credentials in a **locally saved encrypted vault**.  
+All sensitive values are **encrypted before being written to storage**, and vault access requires **master password authentication**.
 
-All sensitive data is encrypted **before storage** and can only be accessed after successful authentication.
+This project demonstrates secure design practices including:
 
-The system demonstrates **secure software design principles including authentication, encryption, and data protection**.
-
----
-
-# ✅ Project Highlights
-
-- 🔑 Master password protected vault
-- 🔐 Strong encryption for stored credentials
-- ➕ Add / View / Update / Delete credential entries
-- 🎲 Optional password generator
-- 🧩 Clean separation of GUI and security logic
-- 💾 Local encrypted vault file storage
+- Authentication controls (master password gate)
+- Confidentiality through encryption-at-rest
+- Clear separation between GUI and security logic
+- Safe storage handling (no plaintext persistence)
 
 ---
 
-# ⚙️ Features
+## ✅ Key Features
 
-## 🔑 Authentication
-
-- Master password required to unlock the vault
-- Input validation for empty fields (email/password)
-
-## 🔒 Vault Security
-
-- No plaintext password storage
-- Encrypted vault stored locally
-- Decryption only after successful authentication
-
-## 🖥️ User Interface
-
-- Simple **Tkinter GUI**
-- Easy workflow for managing credentials
+- 🔑 Master password protected vault access  
+- 🔒 Encryption before storage (no plaintext credentials)  
+- ➕ Add / View / Update / Delete credential entries  
+- 🎲 Optional password generator (if enabled)  
+- 🧩 Modular design (GUI separate from crypto + storage)  
+- 💾 Local encrypted vault file (offline-first)  
 
 ---
 
-# 🧠 System Architecture
+## 🧠 Security Model
+
+This project follows a layered security approach:
+
+- **Master password authentication** before accessing vault operations  
+- **Encryption at rest** for stored credentials  
+- **No plaintext storage** of passwords or sensitive fields  
+- **Validation** to reduce errors and prevent empty/invalid entries  
+- **Controlled decrypt** only after successful unlock  
+
+> Note: For real-world production usage, security can be strengthened further with salting + key derivation (Argon2/PBKDF2), secure clipboard handling, and tamper detection.
+
+---
+
+## 🧩 Architecture
+
+```text
 User
-│
-▼
+ │
+ ▼
 Tkinter GUI
-│
-▼
+ │
+ ▼
 Authentication Layer
 (Master Password Verification)
-│
-▼
+ │
+ ▼
 Crypto Engine
-(Encryption / Decryption)
-│
-▼
+(Encrypt / Decrypt)
+ │
+ ▼
 Encrypted Vault Storage
-
-
-The application follows a **layered security architecture** to separate user interface, authentication, cryptography, and storage.
-
----
-
-# 🏗️ Architecture (Layer Description)
-
-1️⃣ **GUI Layer**  
-Tkinter interface used for interacting with the application.
-
-2️⃣ **Authentication Layer**  
-Verifies the master password before vault access.
-
-3️⃣ **Crypto Layer**  
-Handles encryption and decryption operations.
-
-4️⃣ **Vault Layer**  
-Stores encrypted credential entries securely.
-
----
-
-# 🚀 Setup & Run
-
-## Requirements
-
-- Python **3.10+**
-
----
-
-## Install Dependencies
-
-```bash
-pip install -r requirements.txt
-
-python Vault_GUI.py
-
-
-
-Secure Password Manager
------------------------
-
-Email: ________
-Password: ________
-
-[ Add Entry ]
-[ View Entries ]
-[ Delete Entry ]
-
+(Local File)
 
 
 
 📁 Project Structure
 secure-password-manager/
 │
-├── Vault_GUI.py          # Main GUI application
-├── crypto.py             # Encryption / Decryption logic
-├── hsm.py               # Master password verification
-├── keystore.py              # Vault storage management
-├── requirements.txt
-└── README.md
+├── Vault_GUI.py          # Main GUI application (entry point)
+├── crypto.py             # Encryption / decryption operations
+├── hsm.py                # Master password verification logic
+├── keystore.py           # Vault storage read/write management
+├── requirements.txt      # Dependencies
+└── README.md             # Project documentation
+
+Requirements
+Python 3.10+
 
 
-🔐 Security Model
-
-This password manager follows a layered security model:
-
-• Master password authentication
-• Encryption before vault storage
-• No plaintext password storage
-• Encrypted credential vault
-• Input validation and error handling
+Run the Application
+python Vault_GUI.py
 
 
-🛠 Future Improvements
+Secure Password Manager
+-----------------------
+Email:    [__________]
+Password: [__________]
 
-Cloud vault synchronization
+[ Add Entry ]  [ View Entries ]
+[ Update ]     [ Delete Entry ]
 
-Multi-device password sync
 
-Dark mode UI
-
-Secure backup export
-
-Advanced password generator
-
+🛠 Future Enhancements/Roadmap
+☁️ Encrypted cloud sync (optional + user-controlled)
+🔄 Multi-device vault import/export
+🧾 Secure backup + recovery workflow
+🌙 Dark mode UI
+🧠 Stronger key derivation (Argon2id / PBKDF2) + per-vault salt
+🛡 Tamper detection (HMAC / signature on vault records)
 
 
 📄 License
-
-This project is licensed under the MIT License.
+Licensed under the MIT License.
 
 
 👨‍💻 Author
-
 Pranjal Panta
 
 
