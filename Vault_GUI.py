@@ -155,7 +155,7 @@ class AuthPage(ttk.Frame):
     def _register_user(self, email, password):
         try:
             hsm = SoftHSM(email)
-            vault = Vault(email)
+            vault = Vault(email) #initialize HSM and Vault during user registration
 
             if os.path.exists(hsm.keystore.filename):
                 messagebox.showerror("Error", "User already registered. Please Login.")
