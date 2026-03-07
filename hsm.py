@@ -24,7 +24,7 @@ class SoftHSM:
         public_key = self._private_key.public_key()
         self.certificate = ca_service.issue_cert(public_key) #Derived the public key from the generated private key and requested a certificate from the CA service to bind the key pair to a signed user identity.
         
-        self.keystore.save_keys(self._private_key, self.certificate, password)
+        self.keystore.save_keys(self._private_key, self.certificate, password) #Stored the generated private key and issued certificate in the keystore using the provided password for protection.
 
     def sign_challenge(self, challenge: bytes) -> bytes:
         if not self._private_key: raise PermissionError("HSM Locked")
