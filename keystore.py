@@ -20,7 +20,7 @@ class SecureKeyStore:
         
         salt = os.urandom(16)
         wrapping_key = CryptoEngine.derive_key_argon2(password, salt)
-        nonce, ciphertext = CryptoEngine.aes_gcm_encrypt(pem_priv, wrapping_key)
+        nonce, ciphertext = CryptoEngine.aes_gcm_encrypt(pem_priv, wrapping_key) #Generated a random salt derived a wrapping key from the password using Argon2 and encrypted the private key with AES GCM for secure storage.
 
         keystore_data = {
             "salt": base64.b64encode(salt).decode('utf-8'),
