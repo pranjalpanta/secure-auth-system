@@ -34,7 +34,7 @@ class SoftHSM:
         if not self._private_key: raise PermissionError("HSM Locked")
         return self._private_key.decrypt(
             encrypted_key,
-            padding.OAEP(mgf=padding.MGF1(hashes.SHA256()), algorithm=hashes.SHA256(), label=None)
+            padding.OAEP(mgf=padding.MGF1(hashes.SHA256()), algorithm=hashes.SHA256(), label=None) #Added the decrypt_session_key method to block access when the HSM is locked and to securely decrypt the session key using the private key with RSA OAEP padding and SHA256.
         )
     
     def get_public_key(self):
