@@ -52,4 +52,4 @@ class SecureKeyStore:
             
             return private_key, certificate
         except Exception:
-            raise PermissionError("Keystore Access Denied: Wrong Password.") 
+            raise PermissionError("Keystore Access Denied: Wrong Password.") #Returned the recovered private key and certificate after successful loading and raised a PermissionError with a clear message when keystore decryption failed due to an incorrect password.
