@@ -48,7 +48,7 @@ class SecureKeyStore:
             pem_priv = CryptoEngine.aes_gcm_decrypt(nonce, ciphertext, wrapping_key) #Derived the wrapping key from the password using Argon2 and attempted to decrypt the encrypted private key with AES GCM inside a protected try block.
             
             private_key = serialization.load_pem_private_key(pem_priv, password=None)
-            certificate = x509.load_pem_x509_certificate(cert_bytes)
+            certificate = x509.load_pem_x509_certificate(cert_bytes) #Loaded the decrypted PEM private key and parsed the X509 certificate to reconstruct the user key pair from the stored keystore data.
             
             return private_key, certificate
         except Exception:
