@@ -19,7 +19,7 @@ class SoftHSM:
             return False #Loaded the user's private key and certificate from the keystore during login and returned the authentication result based on whether the operation completed successfully.
 
     def initialize_new_token(self, password, ca_service):
-        self._private_key = rsa.generate_private_key(public_exponent=65537, key_size=2048)
+        self._private_key = rsa.generate_private_key(public_exponent=65537, key_size=2048) #Added the initialize_new_token method to generate a new 2048 bit RSA private key as part of setting up a fresh token for the user.
         
         public_key = self._private_key.public_key()
         self.certificate = ca_service.issue_cert(public_key)
