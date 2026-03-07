@@ -38,4 +38,4 @@ class SoftHSM:
         )
     
     def get_public_key(self):
-        return self.certificate.public_key()
+        return self.certificate.public_key() #Returned the public key from the loaded certificate so it can be used for verification and encryption related operations.
