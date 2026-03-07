@@ -36,7 +36,7 @@ class SecureKeyStore:
         if not os.path.exists(self.filename):
             raise FileNotFoundError(f"Keystore file not found for this user: {self.filename}") #Added the load_keys method with a file existence check that raises a FileNotFoundError when the user keystore is missing.
 
-        with open(self.filename, "r") as f: data = json.load(f)
+        with open(self.filename, "r") as f: data = json.load(f) #Opened the keystore file in read mode and loaded the stored JSON data for further key recovery and processing.
 
         salt = base64.b64decode(data["salt"])
         nonce = base64.b64decode(data["nonce"])
