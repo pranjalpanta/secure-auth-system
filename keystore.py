@@ -9,7 +9,7 @@ class SecureKeyStore:
     """Manages the encrypted storage of the user's Private Key."""
     
     def __init__(self, user_email):
-        self.filename = f"{user_email.replace('@', '_at_')}.keystore"
+        self.filename = f"{user_email.replace('@', '_at_')}.keystore" #Added the SecureKeyStore class to manage encrypted private key storage and initialized a user specific keystore filename based on the email address.
 
     def save_keys(self, private_key, certificate, password):
         pem_priv = private_key.private_bytes(
