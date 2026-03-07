@@ -30,7 +30,7 @@ class SecureKeyStore:
         }
 
         with open(self.filename, "w") as f:
-            json.dump(keystore_data, f, indent=4)
+            json.dump(keystore_data, f, indent=4) #Wrote the keystore data to a user specific JSON file using json.dump with indentation for structured and readable storage.
 
     def load_keys(self, password):
         if not os.path.exists(self.filename):
