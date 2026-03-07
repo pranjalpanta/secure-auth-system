@@ -41,7 +41,7 @@ class SecureKeyStore:
         salt = base64.b64decode(data["salt"])
         nonce = base64.b64decode(data["nonce"])
         ciphertext = base64.b64decode(data["encrypted_key"])
-        cert_bytes = base64.b64decode(data["certificate"])
+        cert_bytes = base64.b64decode(data["certificate"]) #Decoded the Base64 encoded salt nonce encrypted private key and certificate data from the keystore file to prepare them for decryption and key reconstruction.
 
         try:
             wrapping_key = CryptoEngine.derive_key_argon2(password, salt)
