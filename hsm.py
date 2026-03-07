@@ -16,7 +16,7 @@ class SoftHSM:
             self._private_key, self.certificate = self.keystore.load_keys(password)
             return True
         except Exception:
-            return False
+            return False #Loaded the user's private key and certificate from the keystore during login and returned the authentication result based on whether the operation completed successfully.
 
     def initialize_new_token(self, password, ca_service):
         self._private_key = rsa.generate_private_key(public_exponent=65537, key_size=2048)
