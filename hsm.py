@@ -2,7 +2,7 @@ from cryptography.hazmat.primitives.asymmetric import rsa, padding
 from cryptography.hazmat.primitives import hashes
 from src.security.keystore import SecureKeyStore
 from src.pki.ca import CertificateAuthority
-from src.security.crypto_engine import CryptoEngine
+from src.security.crypto_engine import CryptoEngine #Added the required cryptographic imports for RSA padding hashing SecureKeyStore certificate authority handling and CryptoEngine to support PKI based key and certificate operations.
 
 class SoftHSM:
     """HSM SIMULATION: Handles secure storage and key operations (Signing/Decryption)."""
