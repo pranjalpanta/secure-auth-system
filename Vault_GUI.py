@@ -170,7 +170,7 @@ class AuthPage(ttk.Frame):
         except FileExistsError:
             messagebox.showerror("Error", "User files already exist. Cannot register.")
         except Exception as e:
-            messagebox.showerror("Registration Error", f"An unexpected error occurred: {e}")
+            messagebox.showerror("Registration Error", f"An unexpected error occurred: {e}") #Improved the registration error handling logic.
 
     def _login_user(self, email, password):
         try:
