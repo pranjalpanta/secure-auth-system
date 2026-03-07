@@ -34,7 +34,7 @@ class SecureKeyStore:
 
     def load_keys(self, password):
         if not os.path.exists(self.filename):
-            raise FileNotFoundError(f"Keystore file not found for this user: {self.filename}")
+            raise FileNotFoundError(f"Keystore file not found for this user: {self.filename}") #Added the load_keys method with a file existence check that raises a FileNotFoundError when the user keystore is missing.
 
         with open(self.filename, "r") as f: data = json.load(f)
 
