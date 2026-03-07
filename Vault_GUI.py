@@ -178,7 +178,7 @@ class AuthPage(ttk.Frame):
             vault = Vault(email) #Update login initialization in Vault_GUI.py
             
             if not os.path.exists(hsm.keystore.filename):
-                messagebox.showerror("Login Error", "User not found. Please register first.")
+                messagebox.showerror("Login Error", "User not found. Please register first.") #Added a check to stop login and show an error if the user account does not exist.
                 return
 
             if hsm.login(password):
