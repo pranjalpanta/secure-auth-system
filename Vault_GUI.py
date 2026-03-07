@@ -175,7 +175,7 @@ class AuthPage(ttk.Frame):
     def _login_user(self, email, password):
         try:
             hsm = SoftHSM(email)
-            vault = Vault(email)
+            vault = Vault(email) #Update login initialization in Vault_GUI.py
             
             if not os.path.exists(hsm.keystore.filename):
                 messagebox.showerror("Login Error", "User not found. Please register first.")
