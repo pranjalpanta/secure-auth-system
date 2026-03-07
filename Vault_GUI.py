@@ -416,7 +416,7 @@ class ListPage(ttk.Frame):
         ttk.Entry(dialog, textvariable=new_user_var, width=30).grid(row=1, column=1, padx=5, pady=5)
 
         ttk.Label(dialog, text="New Password:").grid(row=2, column=0, padx=5, pady=5, sticky='w')
-        ttk.Entry(dialog, textvariable=new_pass_var, width=30).grid(row=2, column=1, padx=5, pady=5)
+        ttk.Entry(dialog, textvariable=new_pass_var, width=30).grid(row=2, column=1, padx=5, pady=5) #Added input fields for the edit credential dialog including a read only site name field and editable username and password fields for updating saved credentials.
 
         def save_edits():
             new_user = new_user_var.get().strip()
