@@ -9,7 +9,7 @@ class SoftHSM:
     def __init__(self, user_email):
         self._private_key = None
         self.certificate = None
-        self.keystore = SecureKeyStore(user_email) 
+        self.keystore = SecureKeyStore(user_email) #Added the SoftHSM class to simulate secure key storage and cryptographic operations and initialized the private key certificate and SecureKeyStore for each user.
 
     def login(self, password):
         try:
