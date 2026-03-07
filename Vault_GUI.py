@@ -165,7 +165,7 @@ class AuthPage(ttk.Frame):
             vault.setup(hsm) #initialize HSM token and configure vault
             
             messagebox.showinfo("Success", "Registration successful! Please log in now.")
-            self._toggle_mode()
+            self._toggle_mode() #Show a success message after registration and switch back to login mode
 
         except FileExistsError:
             messagebox.showerror("Error", "User files already exist. Cannot register.")
