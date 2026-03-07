@@ -438,7 +438,7 @@ class ListPage(ttk.Frame):
 
         ttk.Button(dialog, text="Save Changes", command=save_edits).grid(row=3, column=0, columnspan=2, pady=10)
         dialog.protocol("WM_DELETE_WINDOW", dialog.destroy)
-        self.controller.wait_window(dialog)
+        self.controller.wait_window(dialog) #Implemented the save changes flow for credential editing by updating stored values handling success and failure cases refreshing the credential list closing the dialog after a successful update and showing an error message when an exception occurs.
 
 
 if __name__ == "__main__":
