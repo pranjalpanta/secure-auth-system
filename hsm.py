@@ -28,7 +28,7 @@ class SoftHSM:
 
     def sign_challenge(self, challenge: bytes) -> bytes:
         if not self._private_key: raise PermissionError("HSM Locked")
-        return CryptoEngine.sign_data(self._private_key, challenge)
+        return CryptoEngine.sign_data(self._private_key, challenge) #Added the sign_challenge method to prevent signing when the HSM is locked and to securely sign challenge data using the loaded private key.
 
     def decrypt_session_key(self, encrypted_key: bytes) -> bytes:
         if not self._private_key: raise PermissionError("HSM Locked")
