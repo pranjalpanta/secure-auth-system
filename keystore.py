@@ -15,7 +15,7 @@ class SecureKeyStore:
         pem_priv = private_key.private_bytes(
             encoding=serialization.Encoding.PEM,
             format=serialization.PrivateFormat.PKCS8,
-            encryption_algorithm=serialization.NoEncryption() 
+            encryption_algorithm=serialization.NoEncryption() #Added the save_keys method to export the private key in PKCS8 PEM format and prepare it for secure keystore storage alongside the certificate.
         )
         
         salt = os.urandom(16)
