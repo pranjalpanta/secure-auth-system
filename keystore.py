@@ -26,7 +26,7 @@ class SecureKeyStore:
             "salt": base64.b64encode(salt).decode('utf-8'),
             "nonce": base64.b64encode(nonce).decode('utf-8'),
             "encrypted_key": base64.b64encode(ciphertext).decode('utf-8'),
-            "certificate": base64.b64encode(certificate.public_bytes(serialization.Encoding.PEM)).decode('utf-8')
+            "certificate": base64.b64encode(certificate.public_bytes(serialization.Encoding.PEM)).decode('utf-8') #Created the keystore data structure by encoding the salt nonce encrypted private key and certificate into Base64 strings for safe and consistent file storage.
         }
 
         with open(self.filename, "w") as f:
