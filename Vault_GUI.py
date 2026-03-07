@@ -195,7 +195,7 @@ class AuthPage(ttk.Frame):
         except FileNotFoundError:
             messagebox.showerror("Login Error", "User files not found. Please register.")
         except Exception as e:
-            messagebox.showerror("Login Error", f"An unexpected error occurred: {e}")
+            messagebox.showerror("Login Error", f"An unexpected error occurred: {e}") #Added the full login workflow by verifying the keystore password attempting to unlock the vault storing the active HSM and Vault session after successful authentication redirecting the user to the VaultPage and handling invalid credentials missing user files corrupted vault data and unexpected exceptions with clear error messages.
 
 
 class VaultPage(ttk.Frame):
