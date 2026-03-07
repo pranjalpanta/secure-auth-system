@@ -22,7 +22,7 @@ class SoftHSM:
         self._private_key = rsa.generate_private_key(public_exponent=65537, key_size=2048) #Added the initialize_new_token method to generate a new 2048 bit RSA private key as part of setting up a fresh token for the user.
         
         public_key = self._private_key.public_key()
-        self.certificate = ca_service.issue_cert(public_key)
+        self.certificate = ca_service.issue_cert(public_key) #Derived the public key from the generated private key and requested a certificate from the CA service to bind the key pair to a signed user identity.
         
         self.keystore.save_keys(self._private_key, self.certificate, password)
 
