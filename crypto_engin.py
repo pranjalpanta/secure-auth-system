@@ -2,7 +2,7 @@ import os
 from cryptography.hazmat.primitives.ciphers.aead import AESGCM
 from cryptography.hazmat.primitives.asymmetric import padding, rsa
 from cryptography.hazmat.primitives import hashes, serialization
-from argon2.low_level import hash_secret_raw, Type, ARGON2_VERSION
+from argon2.low_level import hash_secret_raw, Type, ARGON2_VERSION #Add cryptographic imports for AES-GCM, RSA, hashing, and Argon2
 
 class CryptoEngine:
     """Low-Level Cryptographic Primitives: Argon2id, AES-GCM, RSA-PSS"""
