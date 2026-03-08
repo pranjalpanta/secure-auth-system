@@ -5,7 +5,7 @@ from cryptography.hazmat.primitives import hashes, serialization
 from argon2.low_level import hash_secret_raw, Type, ARGON2_VERSION #Add cryptographic imports for AES-GCM, RSA, hashing, and Argon2
 
 class CryptoEngine:
-    """Low-Level Cryptographic Primitives: Argon2id, AES-GCM, RSA-PSS"""
+    """Low-Level Cryptographic Primitives: Argon2id, AES-GCM, RSA-PSS""" #Create CryptoEngine class for low level cryptographic primitives
     
     @staticmethod
     def derive_key_argon2(password: str, salt: bytes) -> bytes:
