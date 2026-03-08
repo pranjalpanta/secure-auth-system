@@ -24,7 +24,7 @@ class CryptoEngine:
     def aes_gcm_encrypt(data: bytes, key: bytes) -> tuple[bytes, bytes]:
         nonce = os.urandom(12)
         ct = AESGCM(key).encrypt(nonce, data, None)
-        return nonce, ct 
+        return nonce, ct  #Add AES GCM encryption method with nonce generation
 
     @staticmethod
     def aes_gcm_decrypt(nonce: bytes, ciphertext: bytes, key: bytes) -> bytes:
