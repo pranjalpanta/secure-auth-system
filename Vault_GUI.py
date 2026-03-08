@@ -207,7 +207,7 @@ class VaultPage(ttk.Frame):
         self.selected_credential = {}
 
         self.welcome_label = ttk.Label(self, text="", font=('Arial', 14, 'bold'))
-        self.welcome_label.pack(pady=10)
+        self.welcome_label.pack(pady=10) #Add VaultPage main hub with controller, credential state, and welcome label
         
         # --- NAVIGATION BUTTONS ---
         nav_frame = ttk.Frame(self)
