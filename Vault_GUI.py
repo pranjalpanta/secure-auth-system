@@ -217,7 +217,7 @@ class VaultPage(ttk.Frame):
                    command=lambda: self.controller.show_frame("SavePage")).pack(side='left', padx=10, ipady=5)
         
         ttk.Button(nav_frame, text="List Your Passwords", 
-                   command=lambda: self.controller.show_frame("ListPage")).pack(side='left', padx=10, ipady=5)
+                   command=lambda: self.controller.show_frame("ListPage")).pack(side='left', padx=10, ipady=5) #Add navigation frame with buttons for save and list password pages
 
         # Logout Button is at the bottom of the main frame
         ttk.Button(self, text="Logout", command=self._logout).pack(pady=10)
