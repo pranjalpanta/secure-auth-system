@@ -228,7 +228,7 @@ class VaultPage(ttk.Frame):
         if email:
             self.welcome_label.config(text=f"Welcome {email}!")
         else:
-            self.welcome_label.config(text="Welcome!")
+            self.welcome_label.config(text="Welcome!") #Update welcome label using stored user email with fallback text
 
     def _logout(self):
         self.welcome_label.config(text="")
