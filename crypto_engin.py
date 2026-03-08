@@ -17,8 +17,8 @@ class CryptoEngine:
             parallelism=4,
             hash_len=32,
             type=Type.ID,
-            version=ARGON2_VERSION
-        )
+            version=ARGON2_VERSION #Add Argon2id key derivation method with secure parameters
+        ) 
 
     @staticmethod
     def aes_gcm_encrypt(data: bytes, key: bytes) -> tuple[bytes, bytes]:
