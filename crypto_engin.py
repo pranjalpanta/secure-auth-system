@@ -28,7 +28,7 @@ class CryptoEngine:
 
     @staticmethod
     def aes_gcm_decrypt(nonce: bytes, ciphertext: bytes, key: bytes) -> bytes:
-        return AESGCM(key).decrypt(nonce, ciphertext, None)
+        return AESGCM(key).decrypt(nonce, ciphertext, None) #Add AES GCM decryption method for encrypted data
 
     @staticmethod
     def sign_data(private_key, data: bytes) -> bytes:
