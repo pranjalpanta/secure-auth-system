@@ -272,7 +272,7 @@ class SavePage(ttk.Frame):
         ttk.Entry(input_frame, textvariable=self.password_var, show='*', width=30).grid(row=2, column=1, padx=5, pady=5) #Add password label and masked entry field
         
         ttk.Button(self, text="Save Credential", command=self._save_credential).pack(pady=10)
-        ttk.Button(self, text="<< Back to Menu", command=lambda: self.controller.show_frame("VaultPage")).pack(pady=5)
+        ttk.Button(self, text="<< Back to Menu", command=lambda: self.controller.show_frame("VaultPage")).pack(pady=5) #Add Save Credential and Back to Menu buttons
 
     def _save_credential(self):
         site = self.site_var.get().strip()
