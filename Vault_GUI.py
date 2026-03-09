@@ -257,8 +257,8 @@ class SavePage(ttk.Frame):
         self.password_var = tk.StringVar()
         
         input_frame = ttk.Frame(self)
-        input_frame.pack(pady=20)
-
+        input_frame.pack(pady=20) #Initialize save form variables and create input frame layout
+ 
         # Site Name
         ttk.Label(input_frame, text="Site Name:").grid(row=0, column=0, padx=5, pady=5, sticky='w')
         ttk.Entry(input_frame, textvariable=self.site_var, width=30).grid(row=0, column=1, padx=5, pady=5)
