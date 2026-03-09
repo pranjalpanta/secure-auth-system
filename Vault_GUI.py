@@ -265,7 +265,7 @@ class SavePage(ttk.Frame):
 
         # Username
         ttk.Label(input_frame, text="Username:").grid(row=1, column=0, padx=5, pady=5, sticky='w')
-        ttk.Entry(input_frame, textvariable=self.username_var, width=30).grid(row=1, column=1, padx=5, pady=5)
+        ttk.Entry(input_frame, textvariable=self.username_var, width=30).grid(row=1, column=1, padx=5, pady=5) #Add Username label and input field to GUI form
 
         # Password
         ttk.Label(input_frame, text="Password:").grid(row=2, column=0, padx=5, pady=5, sticky='w')
