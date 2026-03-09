@@ -280,7 +280,7 @@ class SavePage(ttk.Frame):
         password = self.password_var.get()
         
         if not site or not user or not password:
-            messagebox.showerror("Error", "All three fields are required.")
+            messagebox.showerror("Error", "All three fields are required.") #Add input validation for saving credentials
             return
 
         try:
