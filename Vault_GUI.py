@@ -238,7 +238,7 @@ class VaultPage(ttk.Frame):
         self.controller.current_vault = None
         self.controller.current_user_email = "" 
         
-        messagebox.showinfo("Logout", "Successfully logged out of the Vault system.")
+        messagebox.showinfo("Logout", "Successfully logged out of the Vault system.") #Add logout flow to reset user, HSM, vault, and private key state
         
         # Navigate to AuthPage, which triggers the clearing of fields
         self.controller.show_frame("AuthPage")
