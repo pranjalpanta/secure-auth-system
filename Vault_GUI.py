@@ -291,7 +291,7 @@ class SavePage(ttk.Frame):
             self.password_var.set("")
             self.controller.show_frame("VaultPage")
         except Exception as e:
-            messagebox.showerror("Error", f"Failed to save credential: {e}")
+            messagebox.showerror("Error", f"Failed to save credential: {e}") #Implement credential save logic with success and error handling
 
 
 class ListPage(ttk.Frame):
