@@ -248,7 +248,7 @@ class SavePage(ttk.Frame):
     """Dedicated frame for saving credentials"""
     def __init__(self, parent, controller):
         super().__init__(parent)
-        self.controller = controller
+        self.controller = controller #Create SavePage frame for credential saving with controller binding
         
         ttk.Label(self, text="Save New Credential", font=('Arial', 14)).pack(pady=10)
         
