@@ -261,7 +261,7 @@ class SavePage(ttk.Frame):
  
         # Site Name
         ttk.Label(input_frame, text="Site Name:").grid(row=0, column=0, padx=5, pady=5, sticky='w')
-        ttk.Entry(input_frame, textvariable=self.site_var, width=30).grid(row=0, column=1, padx=5, pady=5)
+        ttk.Entry(input_frame, textvariable=self.site_var, width=30).grid(row=0, column=1, padx=5, pady=5) #Add Site Name label and input field to GUI form
 
         # Username
         ttk.Label(input_frame, text="Username:").grid(row=1, column=0, padx=5, pady=5, sticky='w')
