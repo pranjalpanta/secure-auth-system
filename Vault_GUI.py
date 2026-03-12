@@ -423,7 +423,7 @@ class ListPage(ttk.Frame):
             new_pass = new_pass_var.get()
             
             if not new_user or not new_pass:
-                messagebox.showerror("Error", "Username and Password cannot be empty.")
+                messagebox.showerror("Error", "Username and Password cannot be empty.") #Add validation to prevent empty username and password submission
                 return
 
             try:
