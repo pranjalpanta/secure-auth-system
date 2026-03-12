@@ -419,8 +419,8 @@ class ListPage(ttk.Frame):
         ttk.Entry(dialog, textvariable=new_pass_var, width=30).grid(row=2, column=1, padx=5, pady=5) #Added input fields for the edit credential dialog including a read only site name field and editable username and password fields for updating saved credentials.
 
         def save_edits():
-            new_user = new_user_var.get().strip()
-            new_pass = new_pass_var.get()
+            new_user = new_user_var.get().strip() 
+            new_pass = new_pass_var.get() #Retrieve updated username and password values in save_edits()
             
             if not new_user or not new_pass:
                 messagebox.showerror("Error", "Username and Password cannot be empty.") #Add validation to prevent empty username and password submission
