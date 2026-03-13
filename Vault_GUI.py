@@ -300,7 +300,7 @@ class ListPage(ttk.Frame):
         super().__init__(parent)
         self.controller = controller
         
-        self.selected_credential = {}
+        self.selected_credential = {} #Add ListPage frame initialization for credential listing, editing, and deletion
         
         ttk.Label(self, text="Your Saved Passwords", font=('Arial', 14)).pack(pady=10)
         
