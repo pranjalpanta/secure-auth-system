@@ -317,7 +317,7 @@ class ListPage(ttk.Frame):
         self.tree.pack(padx=10, pady=5, fill='both', expand=True) #Set Treeview column widths and pack widget with padding and expandable layout
 
         # Context Menu Binding (Right-click)
-        self.tree.bind("<Button-3>", self._show_context_menu)
+        self.tree.bind("<Button-3>", self._show_context_menu) #Bind right-click (Button-3) event to display the context menu on the tree widget.
         
         # Action Frame
         action_frame = ttk.Frame(self)
