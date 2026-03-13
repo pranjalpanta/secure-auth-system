@@ -308,7 +308,7 @@ class ListPage(ttk.Frame):
         self.tree = ttk.Treeview(self, columns=("Username", "Password"), show="tree headings")
         self.tree.heading("#0", text="Site Name", anchor='w')
         self.tree.heading("Username", text="Username", anchor='w')
-        self.tree.heading("Password", text="Password", anchor='w')
+        self.tree.heading("Password", text="Password", anchor='w') #dd Treeview widget with Username and Password columns for credential display
         
         self.tree.column("#0", width=150)
         self.tree.column("Username", width=150)
