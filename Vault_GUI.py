@@ -10,7 +10,7 @@ if __name__ == "__main__":
 
 # Import the core backend logic
 try:
-    from src.security.hsm import SoftHSM
+    from src.security.hsm import SoftHSM 
     from src.pki.ca import CertificateAuthority
     from src.core.vault import Vault
 except ImportError as e:
@@ -321,7 +321,7 @@ class ListPage(ttk.Frame):
         
         # Action Frame
         action_frame = ttk.Frame(self)
-        action_frame.pack(fill='x', pady=5)
+        action_frame.pack(fill='x', pady=5) #Create and pack an action frame to organize action-related widgets horizontally with vertical padding.
         
         ttk.Button(action_frame, text="Refresh List", command=self._refresh_list_tab).pack(side='left', padx=10)
         ttk.Button(action_frame, text="<< Back to Menu", command=lambda: self.controller.show_frame("VaultPage")).pack(side='right', padx=10)
