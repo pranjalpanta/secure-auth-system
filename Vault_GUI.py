@@ -329,7 +329,7 @@ class ListPage(ttk.Frame):
 
     def _refresh_list_tab(self):
         self.tree.delete(*self.tree.get_children())
-        if not self.controller.current_vault: return
+        if not self.controller.current_vault: return #Add refresh function to clear tree view and check current vault before loading data
 
         all_entries = self.controller.current_vault.get_all_site_entries()
         
