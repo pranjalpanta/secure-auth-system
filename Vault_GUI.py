@@ -338,8 +338,8 @@ class ListPage(ttk.Frame):
             
             for cred in credentials_list:
                 tags = (site, cred['username']) 
-                self.tree.insert(site_id, tk.END, text="", values=(cred['username'], cred['password']), tags=tags)
-
+                self.tree.insert(site_id, tk.END, text="", values=(cred['username'], cred['password']), tags=tags) #Load site entries from vault and populate tree view with usernames and passwords grouped by site
+ 
     def _show_context_menu(self, event):
         item_id = self.tree.identify_row(event.y)
         if not item_id: return
