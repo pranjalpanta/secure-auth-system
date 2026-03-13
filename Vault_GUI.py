@@ -314,7 +314,7 @@ class ListPage(ttk.Frame):
         self.tree.column("Username", width=150)
         self.tree.column("Password", width=150)
         
-        self.tree.pack(padx=10, pady=5, fill='both', expand=True)
+        self.tree.pack(padx=10, pady=5, fill='both', expand=True) #Set Treeview column widths and pack widget with padding and expandable layout
 
         # Context Menu Binding (Right-click)
         self.tree.bind("<Button-3>", self._show_context_menu)
