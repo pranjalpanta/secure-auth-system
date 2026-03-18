@@ -391,7 +391,7 @@ class ListPage(ttk.Frame):
                 else:
                     messagebox.showerror("Error", "Deletion failed. Credential not found in vault.")
             except Exception as e:
-                messagebox.showerror("Error", f"An error occurred during deletion: {e}")
+                messagebox.showerror("Error", f"An error occurred during deletion: {e}") #This code refreshes the credential list after a successful deletion, shows an error message if the credential could not be found in the vault, and catches any unexpected exception to display a detailed deletion error message.
 
     def _open_edit_dialog(self):
         cred = self.selected_credential
