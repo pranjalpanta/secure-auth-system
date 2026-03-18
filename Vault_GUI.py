@@ -372,7 +372,7 @@ class ListPage(ttk.Frame):
     def _copy_to_clipboard(self, value):
         self.controller.clipboard_clear()
         self.controller.clipboard_append(value)
-        self.controller.show_notification(f"Copied to clipboard!", 2000)
+        self.controller.show_notification(f"Copied to clipboard!", 2000) #This function clears the clipboard, copies the given value into it, and then shows a short notification to let the user know the text was copied successfully.
 
     def _delete_credential_prompt(self):
         cred = self.selected_credential
