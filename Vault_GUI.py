@@ -406,7 +406,7 @@ class ListPage(ttk.Frame):
         site_var = tk.StringVar(value=cred['site'])
         old_user = cred['user'] 
         new_user_var = tk.StringVar(value=cred['user'])
-        new_pass_var = tk.StringVar(value=cred['pass']) 
+        new_pass_var = tk.StringVar(value=cred['pass']) #This code initializes Tkinter variables with the selected credential’s current site, username, and password, while also storing the original username separately so it can be compared or referenced during the update process.
         
         # Fields
         ttk.Label(dialog, text="Site Name (Read Only):").grid(row=0, column=0, padx=5, pady=5, sticky='w')
