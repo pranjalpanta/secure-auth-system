@@ -395,7 +395,7 @@ class ListPage(ttk.Frame):
 
     def _open_edit_dialog(self):
         cred = self.selected_credential
-        if not cred: return
+        if not cred: return #This function opens the edit process by first getting the currently selected credential, and if no credential is selected, it exits immediately to avoid errors.
 
         dialog = tk.Toplevel(self.controller)
         dialog.title(f"Edit Credential for {cred['site']}")
