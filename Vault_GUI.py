@@ -342,7 +342,7 @@ class ListPage(ttk.Frame):
  
     def _show_context_menu(self, event):
         item_id = self.tree.identify_row(event.y)
-        if not item_id: return
+        if not item_id: return #This line gets the tree row under the mouse pointer and immediately stops the function if the click was not on a valid row.
 
         self.tree.selection_set(item_id)
         
