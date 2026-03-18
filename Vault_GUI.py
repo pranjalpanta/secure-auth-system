@@ -365,7 +365,7 @@ class ListPage(ttk.Frame):
         menu.add_separator() #This code adds two context menu options for copying the selected username or password to the clipboard, then inserts a separator line to visually group these actions from the other menu items.
         
         menu.add_command(label="Edit Credential", command=self._open_edit_dialog)
-        menu.add_command(label="Delete Credential", command=self._delete_credential_prompt)
+        menu.add_command(label="Delete Credential", command=self._delete_credential_prompt) #This code adds two context menu actions: one to open the edit dialog for the selected credential and another to start the delete confirmation process for that credential.
 
         menu.tk_popup(event.x_root, event.y_root)
 
