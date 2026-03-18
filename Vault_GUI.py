@@ -355,7 +355,7 @@ class ListPage(ttk.Frame):
         self.selected_credential = {
             'site': site_name,
             'user': values[0],
-            'pass': values[1]
+            'pass': values[1] #This code creates a dictionary called selected_credential that stores the chosen credential details, including the site name, username, and password, so they can be accessed easily later in the program.
         }
         
         menu = tk.Menu(self.controller, tearoff=0)
