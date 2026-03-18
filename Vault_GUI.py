@@ -362,7 +362,7 @@ class ListPage(ttk.Frame):
         
         menu.add_command(label=f"Copy Username", command=lambda: self._copy_to_clipboard(values[0]))
         menu.add_command(label=f"Copy Password", command=lambda: self._copy_to_clipboard(values[1]))
-        menu.add_separator()
+        menu.add_separator() #This code adds two context menu options for copying the selected username or password to the clipboard, then inserts a separator line to visually group these actions from the other menu items.
         
         menu.add_command(label="Edit Credential", command=self._open_edit_dialog)
         menu.add_command(label="Delete Credential", command=self._delete_credential_prompt)
