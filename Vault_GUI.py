@@ -347,7 +347,7 @@ class ListPage(ttk.Frame):
         self.tree.selection_set(item_id)
         
         is_credential_row = self.tree.parent(item_id)
-        if not is_credential_row: return
+        if not is_credential_row: return #This code first retrieves the selected row’s stored values, then gets the text of that row’s parent item, which is likely being used as the site name.
 
         values = self.tree.item(item_id, 'values')
         site_name = self.tree.item(self.tree.parent(item_id), 'text')
