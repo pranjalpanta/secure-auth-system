@@ -401,7 +401,7 @@ class ListPage(ttk.Frame):
         dialog.title(f"Edit Credential for {cred['site']}")
         dialog.geometry("400x200")
         dialog.transient(self.controller) 
-        dialog.grab_set()
+        dialog.grab_set() #This code creates a new pop-up edit window, sets its title using the selected site name, defines its size, makes it stay on top of the main window as a child dialog, and locks focus on it until the user finishes interacting with it.
 
         site_var = tk.StringVar(value=cred['site'])
         old_user = cred['user'] 
