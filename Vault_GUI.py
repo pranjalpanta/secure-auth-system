@@ -375,7 +375,7 @@ class ListPage(ttk.Frame):
         self.controller.show_notification(f"Copied to clipboard!", 2000) #This function clears the clipboard, copies the given value into it, and then shows a short notification to let the user know the text was copied successfully.
 
     def _delete_credential_prompt(self):
-        cred = self.selected_credential
+        cred = self.selected_credential #This function starts the credential deletion process by loading the currently selected credential into a local variable for easier use in the next steps.
         
         # SAFE STRING DEFINITION
         prompt = "Do you really want to delete credential:\nUsername: " + cred['user'] + "\nPassword: " + cred['pass']
