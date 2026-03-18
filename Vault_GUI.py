@@ -382,7 +382,7 @@ class ListPage(ttk.Frame):
         
         if messagebox.askyesno("Confirm Deletion", prompt):
             try:
-                if self.controller.current_vault.delete_credential(cred['site'], cred['user']):
+                if self.controller.current_vault.delete_credential(cred['site'], cred['user']): #This code builds a confirmation message showing the selected username and password, asks the user to confirm deletion, and if confirmed, tries to delete that credential from the current vault using the site and username.
                     
                     success_msg = "Successfully deleted " + cred['user'] + " on " + cred['site']
                     self.controller.show_notification(success_msg, 5000)
